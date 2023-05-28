@@ -709,14 +709,6 @@
         "description": "关注创业，互联网，技术。就像是你远方的老朋友每天推荐几篇优质英文文章，一起每天进步一点点。在AI横行的年代，更需要人类的手动推荐，手动点评；人类好的品味不会被AI淘汰的。byWSanFrancisco"
       },
       {
-        "id": "582wewtq88w2od8tr8fcap",
-        "parentId": "kr46lmanbgpltpybnd8bo",
-        "title": "Hacker News",
-        "url": "https://news.ycombinator.com/over?points=200",
-        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABfklEQVQ4jX3Tv4oUQRAG8F/NDueurFxwiFwgohgIl5gZ+AAGBvoS5xOIXCIchqKZqRj7AocggqCIkW/gA3hGJ/5jb2baYHp2eha1h6GLqq+qvv66OtK+FpH/lPf/rVRgU7VOGNICVYwlY8NXYolKZEjKoRarNPbKplWizZgBG6KS8ged5MyS85doCtINdi4yX/aYvniSpJ5BZB5JmC148Ja9W/zGCpdvcP81s7M9Job+oppIs1Vx/JV3L7h72J/1FHcO+fiSL8c9Jo3kxgLQdSxx9ITtXa7d5MoeF65y9LiPdd0kpV6rOghWV5z85NVTbh+w+sWbZ3z7wXY1Fsg3EeneWsJiBc2MR5+IiofXqVs2gVEyUMRnwUnD5w80K7437Mxo20n3qQaT+cp25OGpkIruhVmXdEY7etD8HKdbdIVvKrt6rUAIKd9y1zHH++ekloVRvAGT83oR/0JN6AeJvlgq/P9kMJx+sBaZb9eV+kwY1DafcPmo0/TO17FxpT9lR4kM4QVHSAAAAABJRU5ErkJggg==",
-        "level": 3
-      },
-      {
         "id": "jxfq1lcdrlezdvr5ck65t9",
         "parentId": "kr46lmanbgpltpybnd8bo",
         "title": "Stack Overflow Trends",
@@ -724,14 +716,6 @@
         "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXklEQVQ4jbWQsUsCYRjGn/fuSu/Sk3ALmlzNtoagKRqSaHMKGkKhEOV0KWispSXPQaglAnNobOgfaCyIcgicmxO9zFPv/N5WwTs5gt7x+5739/2eDwgw/bK67HcnBQG4Ag3L0LJ/BoBFDuDzTiGUCAywDC3bNbRtANCrwxaBziRZanAGcjADwR8AX1uGesEZyFGzXwO43VsKn07GaJa5lY/GMefUAYooEvaELDnCEW9M2I1V7GdPg04hlLAM7dYqqut67ftLNwdpMB5dgRfXdVMgHIFpx9egfbwYk0eDA2LKAWJMkK6cUOhOGdkpZmoQiy29OmwFq1AKb5CgQyakAXqQJKpELn/eJzPK1JKhPhHjk4EmMzUVmU/coVLkeXff672pk155YXUsxikCJQFeYVCSgCiAV920N311b+r37FslH413S+qaV86rggfIBbG38RRAN+2ZHzsTMKvGv80vvziHGAusG84AAAAASUVORK5CYII=",
         "level": 3,
         "description": "UseStackOverflowInsightsandgetinformationrequiredtounderstand,reach,andattractdevelopers.Improvetechhiring,recruiting,developermarketing,andandplanninginitiatives."
-      },
-      {
-        "id": "o16q8o6vjva515eojrimuf",
-        "parentId": "kr46lmanbgpltpybnd8bo",
-        "title": "hive.one – a new way to find reputable Twitter accounts",
-        "url": "https://hive.one/",
-        "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA00lEQVQ4ja2SvQ4BURSEPz8VEYVColVQaFAIidKDeAGNh/A6WlFKVhRoFBRaiWS3EKEiozjF7gaFuyY5ubmTOZM5514kjSX5+h2+pHFKkg+UcEOQkiTHZgDSSZoBsp/I4x4OO2j37L72oNaAav1dGxvhfILFHK4XKBRhszS+1Q25/gDKlS8jzKaQy8NwZGeraxXlZtN4gpjB8xHGvt+g2bG634xr90zz1cAFMYNM1hYGFne7ssrljVt7poki8RI/fiTnZ3TBX5YYJOgP0sDE0SQAJi9l1JHO71Hi6gAAAABJRU5ErkJggg==",
-        "level": 3
       }
     ],
     "level": 2

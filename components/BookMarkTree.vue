@@ -48,3 +48,9 @@ const treeProps = computed(() => ({ label: 'title', children: 'children'}));
     }
   }
 </style>
+
+<style>
+  .app {
+    padding: 0;
+  }
+</style>

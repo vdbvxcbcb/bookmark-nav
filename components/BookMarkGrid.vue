@@ -1,7 +1,7 @@
 <template>
   <div class="view">
     <template v-for="item in bookmark" :key="item.id">
-      <template v-if="item.title !== '前端八股文刷题大法'">
+      <template v-if="item.id !== 'w3bmhglxumf9dpr13r3cn5'">
         <div class="title-block">
           <div class="title-content">
             <div class="title">{{ item.title }}</div>
@@ -19,7 +19,7 @@
         </div>
       </template>
       <ClientOnly>
-        <template v-if="unlock">
+        <template v-if="item.id === 'w3bmhglxumf9dpr13r3cn5' && unlock" :key="item.id">
           <div class="title-block">
             <div class="title-content">
               <div class="title">{{ item.title }}</div>
@@ -76,6 +76,29 @@ if (cookies.value === '我要八股文') {
 <style lang="scss" scoped>
 .title-block, .gallery-view {
   background-color: #fff;
+}
+.view {
+  height: 100%;
+  padding: 0 96px; 
+  overflow: hidden;
+  position: relative;
+  background-color: #f3f6f8;
+}
+
+@media screen and (max-width: 992px) {
+  .view {
+    padding: 0 24px; 
+  }
+}
+@media screen and (max-width: 768px) {
+  .view {
+    padding: 0 24px; 
+  }
+}
+@media screen and (max-width: 576px) {
+  .view {
+    padding: 0 24px; 
+  }
 }
 .view {
   height: 100%;
