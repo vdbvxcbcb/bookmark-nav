@@ -1,21 +1,42 @@
 <template>
   <div class="view">
     <template v-for="item in bookmark" :key="item.id">
-      <div class="block">
-        <div class="title">
-          <div class="title-padding">{{ item.title }}</div>
+      <template v-if="item.title !== '前端八股文刷题大法'">
+        <div class="title-block">
+          <div class="title-content">
+            <div class="title">{{ item.title }}</div>
+          </div>
         </div>
-      </div>
-      <div class="gallery-view">
-        <div class="collection-view">
-          <div v-for="itemX in item.children" :key="itemX.id" class="item">
-            <a :href="itemX.url" target="_blank" class="item-header">
-              <div class="logo-wrapper"><img v-if="itemX.icon" :src="itemX.icon" class="logo"/> </div>
-              <div class="desc">{{ itemX.title }}</div>
-            </a>
+        <div class="gallery-view">
+          <div class="collection-view">
+            <div v-for="itemX in item.children" :key="itemX.id" class="item">
+              <a :href="itemX.url" target="_blank" class="item-header">
+                <div class="logo-wrapper"><img v-if="itemX.icon" :src="itemX.icon" class="logo"/> </div>
+                <div class="description">{{ itemX.title }}</div>
+              </a>
+            </div> 
           </div> 
-        </div> 
-      </div>
+        </div>
+      </template>
+      <ClientOnly>
+        <template v-if="unlock">
+          <div class="title-block">
+            <div class="title-content">
+              <div class="title">{{ item.title }}</div>
+            </div>
+          </div>
+          <div class="gallery-view">
+            <div class="collection-view">
+              <div v-for="itemX in item.children" :key="itemX.id" class="item">
+                <a :href="itemX.url" target="_blank" class="item-header">
+                  <div class="logo-wrapper"><img v-if="itemX.icon" :src="itemX.icon" class="logo"/> </div>
+                  <div class="description">{{ itemX.title }}</div>
+                </a>
+              </div> 
+            </div> 
+          </div>
+        </template>
+      </ClientOnly>
     </template>
   </div>
 </template>
@@ -32,16 +53,28 @@ interface IBookMarkNodes {
   cover: string,
   children?: IBookMarkNodes[]
 }
+
 let props = defineProps({
   bookmark: {
     type: Array as PropType<IBookMarkNodes[]>,
     require: true
   }
 });
+
+// 控制台输入 document.cookie="req=我要八股文" 解锁
+let unlock = ref(false);
+
+const cookies = useCookie('req');
+
+cookies.value = cookies.value || '';
+
+if (cookies.value === '我要八股文') {
+  unlock.value = true;
+}
 </script>
 
 <style lang="scss" scoped>
-.block, .gallery-view {
+.title-block, .gallery-view {
   background-color: #fff;
 }
 .view {
@@ -61,11 +94,11 @@ let props = defineProps({
 .view::-webkit-scrollbar-thumb:hover {
 	background:#AEACA6;
 }
-.block {
+.title-block {
   width: 100%;
   min-height: 40px;
 }
-.title {
+.title-content {
   display: flex; 
   align-items: center; 
   color: rgb(55, 53, 47);
@@ -74,21 +107,37 @@ let props = defineProps({
   height: 40px; 
   box-shadow: rgb(233, 233, 231) 0px -1px 0px inset;
 }
-.title-padding {
+.title {
   padding: 0 0 0 8px;
 }
 .gallery-view {
-  box-sizing: border-box;
-  padding-bottom: 20px;
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 60px;
+  padding-bottom: 20px;
   min-width: calc(100% - 192px);
   margin: 0 0 20px 0;
+}
+@media screen and (max-width: 992px) {
+  .gallery-view {
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery-view {
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery-view {
+    padding-left: 20px;
+    padding-right: 40px;
+  }
 }
 .collection-view {
   display: grid; 
   height: 100%;
-  position: relative; 
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
   gap: 32px; 
   padding-top: 16px; 
@@ -128,7 +177,7 @@ a {
   height: 20px;
   border-radius: 50%;
 }
-.desc {
+.description {
   box-shadow: rgb(233, 233, 231) 0px 1px 0px inset;
   padding: 15px;
   font-size: 14px;
@@ -142,5 +191,20 @@ a {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4; // 需要显示的行数  
   -webkit-box-orient: vertical;
+}
+@media screen and (max-width: 992px) {
+  .description {
+    height: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .description {
+    height: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .description {
+    height: 50%;
+  }
 }
 </style>
