@@ -6,8 +6,9 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
+      title: '个人收藏夹导航',
       meta: [
-        // <meta name="viewport" content="width=device-width, initial-scale=1">
+        { name: 'title', content: '个人收藏夹导航' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ]
     }
